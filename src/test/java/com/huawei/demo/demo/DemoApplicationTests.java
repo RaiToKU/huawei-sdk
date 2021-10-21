@@ -37,12 +37,12 @@ class DemoApplicationTests {
     /**
      * Access Key Id
      */
-    public final static String AK = "M5DZEMWZ9CBEF4WKLGVI";
+    public final static String AK = "";
 
     /**
      * Secret Access Key
      */
-    public final static String SK = "5JjSxS24q4ExW1r5sdXWIahj8Z8jlTozUGw7S0tl";
+    public final static String SK = "";
 
     @Test
     void contextLoads() {
