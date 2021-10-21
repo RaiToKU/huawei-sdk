@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.0-SNAPSHOT</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.huawei.demo</groupId>
+    <artifactId>demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>demo</name>
+    <description>Demo project for Spring Boot</description>
+    <properties>
+        <java.version>11</java.version>
+        <huawei-ods-sdk.version>3.20.6.2</huawei-ods-sdk.version>
+        <huawei-sdk.version>3.0.65</huawei-sdk.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!--	弹性云服务器 	-->
+        <!--	https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ecs 	-->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-ecs</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--	存储 	-->
+        <!--	https://support.huaweicloud.com/obs/ 	-->
+        <dependency>
+            <groupId>com.huaweicloud</groupId>
+            <artifactId>esdk-obs-java</artifactId>
+            <version>${huawei-ods-sdk.version}</version>
+        </dependency>
+
+        <!--	云硬盘 	-->
+        <!--	https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=evs 	-->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-evs</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--	内容分发网络cdn 	-->
+        <!--	https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=cdn 	-->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-cdn</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--	数据加密服务-密钥管理 	-->
+        <!--	https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=kms 	-->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-kms</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--	态势感知 	-->
+        <!--	https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=sa 	-->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-sa</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--	SSL证书管理 	-->
+        <!--	https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=scm 	-->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-scm</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--	Web应用防火墙 	-->
+        <!--	https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=waf 	-->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-waf</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--	Anti-DDoS流量清洗 	-->
+        <!--	https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=antiddos 	-->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-antiddos</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--	运营  	-->
+        <!--    https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=bss    -->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-bss</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--	弹性公网IP 	-->
+        <!--	https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=eip 	-->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-eip</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--    弹性负载均衡 	-->
+        <!--	https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=elb 	-->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-elb</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--    虚拟私有云 	-->
+        <!--	https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=vpc 	-->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-vpc</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--	云解析服务 	-->
+        <!--	https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=dns 	-->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-dns</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--	数据库	-->
+        <!--	https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=rds	-->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-rds</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--	数据复制服务	-->
+        <!--	https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=drs	-->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-drs</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--	数据管理服务	-->
+        <!--	https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=das	-->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-das</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+
+        <!--	容器 	-->
+        <!--	https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=cce	-->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-cce</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--	容器镜像服务 	-->
+        <!--	https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=swr	-->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-swr</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--    消息通知服务    -->
+        <!--    https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=apig    -->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-smn</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--    API网关    -->
+        <!--    https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=smn    -->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-apig</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--    分布式消息服务 RabbitMQ    -->
+        <!--    https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=rabbitmq    -->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-rabbitmq</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--    分布式消息服务 Kafka    -->
+        <!--    https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=kafka    -->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-kafka</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--    分布式缓存服务    -->
+        <!--    https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=dcs    -->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-dcs</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--    应用管理与运维平台    -->
+        <!--    https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=servicestage    -->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-servicestage</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+        <!--     统一身份认证服务      -->
+        <!--	https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=iam	-->
+        <dependency>
+            <groupId>com.huaweicloud.sdk</groupId>
+            <artifactId>huaweicloud-sdk-iam</artifactId>
+            <version>${huawei-sdk.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
+
+</project>
